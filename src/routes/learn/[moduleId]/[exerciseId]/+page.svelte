@@ -2,7 +2,8 @@
 	import { invalidate, goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
-	const IS_STATIC = (import.meta.env as Record<string, string>).PUBLIC_STATIC === 'true';
+	import { PUBLIC_STATIC } from '$env/static/public';
+	const IS_STATIC = PUBLIC_STATIC === 'true';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import ExerciseHeader from '$lib/components/exercise/ExerciseHeader.svelte';
 	import StepShell from '$lib/components/exercise/StepShell.svelte';

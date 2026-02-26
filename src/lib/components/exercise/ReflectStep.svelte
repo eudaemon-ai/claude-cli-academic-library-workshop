@@ -1,5 +1,6 @@
 <script lang="ts">
-	const IS_STATIC = (import.meta.env as Record<string, string>).PUBLIC_STATIC === 'true';
+	import { PUBLIC_STATIC } from '$env/static/public';
+	const IS_STATIC = PUBLIC_STATIC === 'true';
 
 	let {
 		step,

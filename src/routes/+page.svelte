@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
 	import { base } from '$app/paths';
+	import { PUBLIC_STATIC } from '$env/static/public';
 	import ModuleCard from '$lib/components/modules/ModuleCard.svelte';
 	import LearnerIdentityModal from '$lib/components/ui/LearnerIdentityModal.svelte';
-	const IS_STATIC = (import.meta.env as Record<string, string>).PUBLIC_STATIC === 'true';
+	const IS_STATIC = PUBLIC_STATIC === 'true';
 
 	let { data } = $props();
 

@@ -1,0 +1,1 @@
+export const env={"PUBLIC_WORKSHOP_TITLE":"Library AI Workshop","PUBLIC_COHORT":"spring2026","PUBLIC_STATIC":"true"}

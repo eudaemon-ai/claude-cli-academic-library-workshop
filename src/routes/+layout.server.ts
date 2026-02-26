@@ -2,6 +2,8 @@ import type { LayoutServerLoad } from './$types.js';
 import { loadAllModules } from '$lib/content/loader.js';
 import { getLearner } from '$lib/db/queries.js';
 
+export const prerender = process.env.PUBLIC_STATIC === 'true';
+
 export const load: LayoutServerLoad = async ({ cookies }) => {
 	const modules = loadAllModules();
 

@@ -1,6 +1,8 @@
 import type { PageServerLoad } from './$types.js';
 import { getLearnerProgress } from '$lib/db/queries.js';
 
+export const prerender = process.env.PUBLIC_STATIC === 'true';
+
 export const load: PageServerLoad = async ({ cookies }) => {
 	if (process.env.PUBLIC_STATIC === 'true') {
 		return { learnerId: null, completedSteps: [] };

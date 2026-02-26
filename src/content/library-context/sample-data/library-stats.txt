@@ -7,6 +7,8 @@ INSTITUTIONAL CONTEXT
 ════════════════════════════════════════════
 
 Institution: Millbrook University (mid-size research university, ~12,000 students)
+  Undergraduate enrollment: ~9,800
+  Graduate enrollment: ~2,200 (master's and doctoral programs)
 Library system: Main library + 2 branch libraries (science, law)
 Reporting line: Dean of Libraries reports to Provost
 Current strategic plan period: 2024–2027
@@ -55,6 +57,11 @@ COLLECTIONS & ACCESS
 STAFFING
   Total FTE:                                  38
     Librarians (MLS-credentialed):            14
+      Research services:                       2
+      Instruction / information literacy:      4
+      Subject liaison (all other depts):       4
+      Cataloging / metadata:                   2
+      Systems / digital initiatives:           2
     Paraprofessional staff:                   21
     Student workers (FTE equivalent):          3
   Open positions:                              2   (research services librarian; metadata specialist)

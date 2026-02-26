@@ -1,0 +1,33 @@
+name: Release Workshop Materials
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/library-context/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package library-context
+        run: |
+          cd src/content
+          zip -r ../../library-context.zip library-context/
+
+      - name: Update workshop-materials release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete workshop-materials --yes --cleanup-tag 2>/dev/null || true
+          gh release create workshop-materials library-context.zip \
+            --tag workshop-materials \
+            --title "Workshop Materials" \
+            --notes $'Download **library-context.zip**, unzip it, and navigate to the `library-context/` folder to begin the exercises.' \
+            --latest=false

@@ -1,0 +1,52 @@
+{
+  "_comment": "IAM role manifest for LibraryWorkshopRole. Replace 123456789012 with your 12-digit AWS account ID.",
+
+  "RoleName": "LibraryWorkshopRole",
+  "Description": "Assumed by the Library AI Workshop SvelteKit app via STS to access DynamoDB.",
+  "MaxSessionDuration": 3600,
+
+  "TrustPolicy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowEcsTaskAssumeRole",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "ecs-tasks.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+      },
+      {
+        "Sid": "AllowLocalSsoAssumeRole",
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::123456789012:root"
+        },
+        "Action": "sts:AssumeRole"
+      }
+    ]
+  },
+
+  "PermissionsPolicy": {
+    "PolicyName": "LibraryWorkshopDynamoDBAccess",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "TableReadWrite",
+          "Effect": "Allow",
+          "Action": [
+            "dynamodb:PutItem",
+            "dynamodb:GetItem",
+            "dynamodb:UpdateItem",
+            "dynamodb:Query"
+          ],
+          "Resource": [
+            "arn:aws:dynamodb:us-east-1:123456789012:table/LibraryWorkshop",
+            "arn:aws:dynamodb:us-east-1:123456789012:table/LibraryWorkshop/index/cohort-lastSeen-index"
+          ]
+        }
+      ]
+    }
+  }
+}

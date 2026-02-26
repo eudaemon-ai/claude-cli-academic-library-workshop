@@ -27,7 +27,6 @@ jobs:
         run: |
           gh release delete workshop-materials --yes --cleanup-tag 2>/dev/null || true
           gh release create workshop-materials library-context.zip \
-            --tag workshop-materials \
             --title "Workshop Materials" \
             --notes $'Download **library-context.zip**, unzip it, and navigate to the `library-context/` folder to begin the exercises.' \
             --latest=false

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { invalidate, goto } from '$app/navigation';
 	import { page } from '$app/state';
+	import { base } from '$app/paths';
 	const IS_STATIC = (import.meta.env as Record<string, string>).PUBLIC_STATIC === 'true';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import ExerciseHeader from '$lib/components/exercise/ExerciseHeader.svelte';
@@ -68,7 +69,7 @@
 		const currentIdx = mod.exercises.findIndex((e) => e.id === exercise.id);
 		const next = mod.exercises[currentIdx + 1];
 		if (next) {
-			await goto(`/learn/${mod.id}/${next.id}`);
+			await goto(`${base}/learn/${mod.id}/${next.id}`);
 		} else {
 			showModuleComplete = true;
 		}
@@ -110,7 +111,7 @@
 			<div class="mx-auto max-w-2xl px-5 py-8 sm:px-10 sm:py-10">
 			<div class="mb-5 -mt-1 flex items-center justify-between">
 				<a
-					href="/learn/{mod.id}"
+					href="{base}/learn/{mod.id}"
 					class="text-[0.8125rem] text-gray-400 transition-colors hover:text-gray-600"
 				>← {mod.title}</a>
 				<button

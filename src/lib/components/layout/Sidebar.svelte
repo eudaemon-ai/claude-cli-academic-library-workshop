@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ExerciseMeta } from '$lib/content/types.js';
+	import { base } from '$app/paths';
 
 	let {
 		moduleId,
@@ -53,7 +54,7 @@
 	<div class="flex-1 overflow-y-auto">
 		<!-- Module overview entry -->
 		<a
-			href="/learn/{moduleId}"
+			href="{base}/learn/{moduleId}"
 			onclick={onClose}
 			class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[0.8125rem] leading-snug transition-colors
 				{isOnOverview
@@ -79,7 +80,7 @@
 				{@const isComplete = completedExerciseIds.includes(ex.id)}
 				{@const isCurrent = ex.id === currentExerciseId}
 				<a
-					href="/learn/{moduleId}/{ex.id}"
+					href="{base}/learn/{moduleId}/{ex.id}"
 					onclick={onClose}
 					class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[0.8125rem] leading-snug transition-colors
 						{isCurrent
@@ -110,7 +111,7 @@
 	<!-- Back to all modules -->
 	<div class="mt-6 border-t border-gray-200 pt-4">
 		<a
-			href="/"
+			href="{base}/"
 			onclick={onClose}
 			class="flex items-center gap-2 rounded-lg px-3 py-2 text-[0.8125rem] text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
 		>

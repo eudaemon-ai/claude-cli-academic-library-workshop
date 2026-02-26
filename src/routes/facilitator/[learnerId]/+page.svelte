@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let { data } = $props();
 	const { learner, timeline, notes } = data;
 </script>
 
 <div class="mx-auto max-w-3xl px-4 py-8">
 	<div class="mb-6 flex items-center gap-3">
-		<a href="/facilitator?token={data.token}" class="text-sm text-blue-600 hover:underline">
+		<a href="{base}/facilitator?token={data.token}" class="text-sm text-blue-600 hover:underline">
 			← Back to Dashboard
 		</a>
 	</div>

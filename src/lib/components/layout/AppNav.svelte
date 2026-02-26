@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
+	import { base } from '$app/paths';
 	import type { ModuleMeta } from '$lib/content/types.js';
 
 	let {
@@ -57,7 +58,7 @@
 
 <nav class="relative sticky top-0 z-30 border-b border-blue-950 bg-jhu-blue shadow-md">
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
-		<a href="/" class="flex items-center gap-3 text-white">
+		<a href="{base}/" class="flex items-center gap-3 text-white">
 			<span class="font-serif text-sm font-bold tracking-wide text-jhu-gold">JHU</span>
 			<span class="h-4 w-px bg-white/30"></span>
 			<span class="text-sm font-medium tracking-wide">{workshopTitle}</span>
@@ -67,7 +68,7 @@
 		<div class="hidden items-center gap-6 md:flex">
 			{#each modules as mod}
 				<a
-					href="/learn/{mod.id}"
+					href="{base}/learn/{mod.id}"
 					class="border-b-2 pb-0.5 text-sm font-medium transition-colors {currentModuleId === mod.id
 						? 'border-current ' + (moduleColors[mod.id] ?? 'text-white')
 						: 'border-transparent text-white/70 hover:text-white'}"
@@ -139,7 +140,7 @@
 			<div class="space-y-1">
 				{#each modules as mod}
 					<a
-						href="/learn/{mod.id}"
+						href="{base}/learn/{mod.id}"
 						class="flex items-center rounded-lg border-l-2 px-3 py-2.5 text-sm font-medium transition-colors
 							{currentModuleId === mod.id
 							? 'border-current bg-white/10 ' + (moduleColors[mod.id] ?? 'text-white')

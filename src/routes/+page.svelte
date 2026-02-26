@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
+	import { base } from '$app/paths';
 	import ModuleCard from '$lib/components/modules/ModuleCard.svelte';
 	import LearnerIdentityModal from '$lib/components/ui/LearnerIdentityModal.svelte';
 	const IS_STATIC = (import.meta.env as Record<string, string>).PUBLIC_STATIC === 'true';
@@ -96,7 +97,7 @@
 				Learn to use Claude Code CLI in your everyday library work — no coding required.
 			</p>
 			<p class="mt-2 font-mono text-[0.6875rem] tracking-wide text-gray-400">
-				exercises run in your <a href="/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">terminal</a> &nbsp;·&nbsp; self-paced
+				exercises run in your <a href="{base}/terminal-primer" class="text-jhu-blue/50 underline underline-offset-2 hover:text-jhu-blue transition-colors">terminal</a> &nbsp;·&nbsp; self-paced
 			</p>
 			<div class="mx-auto mt-6 h-px w-10 bg-jhu-gold"></div>
 		</div>

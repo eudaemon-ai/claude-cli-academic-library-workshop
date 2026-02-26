@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { base } from '$app/paths';
 
 	// Referrer check: only show the "back" link if coming from the landing page.
 	// The page is publicly accessible by URL but is framed as a landing-page resource.
@@ -13,7 +14,7 @@
 
 	<!-- Back link -->
 	<a
-		href="/"
+		href="{base}/"
 		class="mb-10 inline-flex items-center gap-1.5 text-sm text-jhu-blue/60 transition-colors hover:text-jhu-blue"
 	>
 		<svg viewBox="0 0 16 16" fill="currentColor" class="h-3.5 w-3.5" aria-hidden="true">
@@ -244,7 +245,7 @@ CLAUDE.md          patron-queries.txt   catalog-items.txt
 	<!-- ── CTA ── -->
 	<div class="text-center">
 		<a
-			href="/"
+			href="{base}/"
 			class="inline-flex items-center gap-2 rounded-full bg-jhu-blue px-8 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-jhu-blue/90"
 		>
 			I'm ready — take me to the modules

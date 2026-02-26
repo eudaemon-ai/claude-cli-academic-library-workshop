@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import type { ExerciseMeta } from '$lib/content/types.js';
 
 	let {
@@ -62,14 +63,14 @@
 	<!-- CTAs -->
 	<div class="flex flex-col items-center gap-3 sm:flex-row">
 		<button
-			onclick={() => goto(`/learn/${moduleId}`)}
+			onclick={() => goto(`${base}/learn/${moduleId}`)}
 			class="rounded-xl px-8 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
 			style="background-color: {accentColor}"
 		>
 			View Module Summary
 		</button>
 		<a
-			href="/"
+			href="{base}/"
 			class="rounded-xl border border-gray-200 bg-white px-8 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50"
 		>
 			← All Modules

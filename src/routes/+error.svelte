@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { base } from '$app/paths';
 
 	const status = $derived(page.status);
 	const message = $derived(page.error?.message ?? '');
@@ -40,14 +41,14 @@
 	<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
 		{#if is403}
 			<a
-				href="/"
+				href="{base}/"
 				class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50"
 			>
 				Go to Workshop Home
 			</a>
 		{:else if is404}
 			<a
-				href="/"
+				href="{base}/"
 				class="rounded-lg bg-jhu-blue px-5 py-2 text-sm font-medium text-white hover:bg-blue-950"
 			>
 				Back to Modules
@@ -66,7 +67,7 @@
 				Refresh Page
 			</button>
 			<a
-				href="/"
+				href="{base}/"
 				class="rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50"
 			>
 				Go to Workshop Home

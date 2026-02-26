@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import ProgressBar from '$lib/components/layout/ProgressBar.svelte';
+	import { base } from '$app/paths';
 
 	let { data } = $props();
 	const module = $derived(data.module);
@@ -89,7 +90,7 @@
 				{@const resumeExercise = module.exercises.find((ex) => !completedExerciseIds.includes(ex.id)) ?? module.exercises[0]}
 				<div class="mt-10">
 					<a
-						href="/learn/{module.id}/{resumeExercise.id}"
+						href="{base}/learn/{module.id}/{resumeExercise.id}"
 						class="inline-flex items-center gap-2 rounded-lg px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
 						style="background-color: {accentColor}"
 					>

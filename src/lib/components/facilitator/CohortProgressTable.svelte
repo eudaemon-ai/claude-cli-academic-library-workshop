@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatRelativeTime } from '$lib/utils/format.js';
+	import { base } from '$app/paths';
 
 	interface LearnerRow {
 		id: string;
@@ -42,7 +43,7 @@
 			{#each learners as row}
 				<tr class="hover:bg-gray-50">
 					<td class="px-4 py-3">
-						<a href="/facilitator/{row.id}" class="font-medium text-gray-900 hover:text-blue-600">
+						<a href="{base}/facilitator/{row.id}" class="font-medium text-gray-900 hover:text-blue-600">
 							{row.name}
 						</a>
 					</td>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ModuleMeta } from '$lib/content/types.js';
+	import { base } from '$app/paths';
 
 	let {
 		module,
@@ -58,7 +59,7 @@
 </script>
 
 <a
-	href="/learn/{module.id}"
+	href="{base}/learn/{module.id}"
 	class="group flex flex-col overflow-hidden rounded-xl border-2 bg-white shadow-sm transition-all hover:shadow-md {accent}"
 >
 	<!-- Colored top accent bar -->

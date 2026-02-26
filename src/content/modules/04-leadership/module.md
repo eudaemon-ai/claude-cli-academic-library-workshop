@@ -44,4 +44,4 @@ Make sure Claude Code is installed on your machine. Installation instructions fo
 - [Windows](https://docs.anthropic.com/en/docs/claude-code/setup#set-up-on-windows)
 - [Linux](https://docs.anthropic.com/en/docs/claude-code/setup)
 
-Once installed, navigate to the `library-context/` folder and start Claude Code with `claude`. You'll use `library-stats.txt` throughout this module — you'll pass it to Claude directly with the `@` syntax.
+Once installed, navigate to your `library-context/` folder and start Claude Code with `claude`. If you don't have the folder yet, download it from **[workshop-materials](https://github.com/eudaemon-ai/claude-cli-academic-library-workshop/releases/download/workshop-materials/library-context.zip)**. You'll pass `library-stats.txt` to Claude directly with the `@` syntax throughout this module.

@@ -10,11 +10,17 @@ steps:
     instruction: |
       Open a terminal window on your computer. If you're on a Mac, press **Command + Space**, type "Terminal," and press Enter.
 
-      Navigate to the workshop's `library-context` folder. Your facilitator will tell you the exact path. It will look something like:
+      Download the workshop materials from the link below, unzip the file, and move the `library-context` folder somewhere convenient — for example, a `workshop` folder in your home directory.
+
+      **[Download library-context.zip](https://github.com/eudaemon-ai/claude-cli-academic-library-workshop/releases/download/workshop-materials/library-context.zip)**
+
+      Then navigate to the folder in your terminal:
 
       ```
       cd ~/workshop/library-context
       ```
+
+      Replace `~/workshop/library-context` with the path where you saved the folder.
     checkpoint: "You should see a prompt ending with `library-context $` or similar."
 
   - index: 1

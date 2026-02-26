@@ -44,4 +44,4 @@ Make sure Claude Code is installed on your machine. Installation instructions fo
 - [Windows](https://docs.anthropic.com/en/docs/claude-code/setup#set-up-on-windows)
 - [Linux](https://docs.anthropic.com/en/docs/claude-code/setup)
 
-Once installed, open a terminal and navigate to the `library-context/` folder provided with this workshop. You'll run all exercises from that folder.
+Once installed, download the workshop materials — **[library-context.zip](https://github.com/eudaemon-ai/claude-cli-academic-library-workshop/releases/download/workshop-materials/library-context.zip)** — unzip it, and navigate to the `library-context/` folder in your terminal. You'll run all exercises from that folder.

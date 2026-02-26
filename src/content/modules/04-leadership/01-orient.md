@@ -78,7 +78,7 @@ steps:
 
 Leadership documents are context-dependent in a way that reference responses or catalog records are not. A provost expects different language than a faculty senate. An accreditation self-study requires different evidence than a board report. Getting Claude to produce useful leadership drafts means giving it the institutional context that only you have.
 
-The `CLAUDE.md` file in the workshop folder includes a **Leadership Context** section added specifically for this module — strategic priorities, stakeholder communication norms, and administrative writing restrictions. This exercise verifies Claude has absorbed it before you put it to work.
+The `CLAUDE.md` file in the `library-context/` folder includes a **Leadership Context** section added specifically for this module — strategic priorities, stakeholder communication norms, and administrative writing restrictions. This exercise verifies Claude has absorbed it before you put it to work.
 
 You'll also practice using `@library-stats.txt` to pass institutional data directly to Claude, without copying and pasting.
 

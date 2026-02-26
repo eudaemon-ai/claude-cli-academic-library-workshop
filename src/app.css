@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	/* JHU Brand Colors */
+	--color-jhu-blue: #002D72;
+	--color-jhu-spirit: #68ACE5;
+	--color-jhu-gold: #F0B323;
+	--color-jhu-sable: #53565A;
+
+	/* Module accent colors (JHU-mapped) */
+	--color-module-reference: #002D72;   /* Heritage Blue */
+	--color-module-cataloging: #1265A8;  /* Mid Blue */
+	--color-module-collection: #D4870A;  /* Deep Gold */
+
+	/* Font families */
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-serif: 'Libre Baskerville', Georgia, serif;
+	--font-mono: 'Fira Code', monospace;
+}
+
+@layer base {
+	body {
+		@apply bg-slate-50 text-gray-900 antialiased;
+		font-family: var(--font-sans);
+		font-size: 15px;
+		line-height: 1.65;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	/* Serif is opt-in via .font-serif — not applied globally to headings */
+	code, pre, kbd {
+		font-family: var(--font-mono);
+	}
+
+	/* Base link style for links outside prose (error page, module descriptions, etc.) */
+	a:not([class]) {
+		color: #1265A8;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		text-decoration-thickness: 1px;
+		text-decoration-color: #1265A880;
+		transition: color 0.15s, text-decoration-color 0.15s;
+	}
+
+	a:not([class]):hover {
+		color: #002D72;
+		text-decoration-color: #002D72;
+	}
+
+	a:not([class]):visited {
+		color: #5b3e9e;
+		text-decoration-color: #5b3e9e80;
+	}
+}
+
+/* Tailwind Typography prose overrides */
+@layer components {
+	.prose {
+		--tw-prose-body: #374151;
+		--tw-prose-headings: #002D72;
+		--tw-prose-links: #1265A8;
+		--tw-prose-code: #002D72;
+		--tw-prose-pre-bg: #111827;
+		font-family: var(--font-sans);
+		font-size: 0.9375rem;
+		line-height: 1.78;
+	}
+
+	/* Textbook-style paragraph rhythm */
+	.prose p {
+		margin-top: 1.15em;
+		margin-bottom: 1.15em;
+	}
+
+	.prose p:first-child {
+		margin-top: 0;
+	}
+
+	.prose p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Subheadings get clear vertical separation */
+	.prose h2 {
+		margin-top: 1.75em;
+		margin-bottom: 0.6em;
+	}
+
+	.prose h3 {
+		margin-top: 1.4em;
+		margin-bottom: 0.5em;
+	}
+
+	.prose h2, .prose h3, .prose h4 {
+		font-family: var(--font-sans);
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	/* List items breathe more */
+	.prose ul, .prose ol {
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
+	}
+
+	.prose li {
+		margin-top: 0.4em;
+		margin-bottom: 0.4em;
+	}
+
+	.prose code {
+		font-family: var(--font-mono);
+		font-size: 0.875em;
+	}
+
+	/* Link styling inside prose content */
+	.prose a {
+		color: #1265A8;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		text-decoration-thickness: 1px;
+		text-decoration-color: #1265A880;
+		font-weight: 500;
+		transition: color 0.15s, text-decoration-color 0.15s;
+	}
+
+	.prose a:hover {
+		color: #002D72;
+		text-decoration-color: #002D72;
+	}
+
+	.prose a:visited {
+		color: #5b3e9e;
+		text-decoration-color: #5b3e9e80;
+	}
+}
